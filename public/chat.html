@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css" />
+    <title>Chat-app</title>
+  </head>
+  <body>
+    <section class="sidebar-left">
+      <!-- <h1>Room123</h1> -->
+      <button><i class="fas fa-sign-out-alt"></i></button>
+    </section>
+
+    <section class="main-content">
+      <div class="header-box">
+        <h1 class="main-heading">Секрета</h1>
+      </div>
+
+      <div class="messages"></div>
+      <form class="message-form">
+        <input
+          type="text"
+          name="message"
+          placeholder="message"
+          id="sendMessage"
+          required
+          autocomplete="off"
+        />
+
+        <button id="send">
+          <i class="fas fa-chevron-circle-right"></i>
+        </button>
+        <button class="share">
+          <i class="fas fa-bullhorn"></i>
+        </button>
+      </form>
+
+      <script id="message-template" type="text/html">
+        <div>
+          <p class="user-name">{{username}}</p>
+          <p class="message-time"><span>{{createdAt}}</span> {{message}}</p>
+        </div>
+      </script>
+
+      <script id="location-message-template" type="text/html">
+        <div>
+          <p class="user-name">{{username}}</p>
+          <p class="message-time">
+            <span>{{createdAt}}</span>
+            <a href="{{url}}" target="_blank" class="link"
+              >My current Loaction</a
+            >
+          </p>
+          <!-- _blank will make sure that you dont leave chat room and got the url.  -->
+        </div>
+      </script>
+
+      <script id="sidebar-template" type="text/html">
+        <h1>{{room}}</h1>
+        <h2>Users</h2>
+        <div class="users-list">
+          <ul class="users">
+            {{#users}}
+            <li>{{username}}</li>
+            {{/users}}
+          </ul>
+        </div>
+      </script>
+    </section>
+    <!-- Scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/chat.js"></script>
+  </body>
+</html>

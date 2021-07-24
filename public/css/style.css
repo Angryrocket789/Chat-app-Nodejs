@@ -1,0 +1,212 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+/* ----------- */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241, 241, 241);
+  position: relative;
+}
+
+.main-content {
+  /* border: 2px solid rgb(134, 134, 134); */
+  height: 97vh;
+  width: 35rem;
+  text-align: center;
+  background: rgb(255, 246, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  box-shadow: -10px 10px 17px 1px rgba(51, 0, 38, 0.21);
+  -webkit-box-shadow: -10px 10px 17px 1px rgba(51, 0, 38, 0.21);
+  -moz-box-shadow: -10px 10px 17px 1px rgba(51, 0, 38, 0.21);
+}
+
+/* Main heading fomating */
+.header-box {
+  background: purple;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.main-heading {
+  font-size: 2rem;
+  font-family: "Mate SC", serif;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.2rem;
+}
+/* message box */
+.messages {
+  height: 80vh;
+  overflow: auto;
+}
+.messages > div {
+  /* display: flex; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.message-time {
+  background: rgb(249, 187, 255);
+  font-family: "Mate SC", serif;
+  font-size: 1.2rem;
+  text-align: start;
+  width: 13rem;
+  margin-left: 0.7rem;
+  padding-left: 0.7rem;
+  border-radius: 5px;
+}
+.message-time > span {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  margin-right: 0.7rem;
+}
+
+.user-name {
+  text-align: start;
+  margin-left: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: lighter;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* Formatting Form */
+/* .message-form {
+  display: flex;
+} */
+.message-form > input {
+  width: 29rem;
+  height: 1.5rem;
+  margin-left: 0.7rem;
+  margin-right: 0.2rem;
+}
+
+/* --------------------- */
+#send {
+  border: none;
+  background: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-chevron-circle-right {
+  font-size: 1.5rem;
+  color: rgb(0, 219, 0);
+  margin-left: -0.3rem;
+}
+
+#sendMessage {
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+}
+
+/* Share button */
+.share {
+  border: none;
+  background: none;
+  margin-left: 0.5rem;
+}
+
+.fa-bullhorn {
+  font-size: 1.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* SIdebar left */
+
+.sidebar-left {
+  position: absolute;
+  left: 0;
+  min-height: 100vh;
+  background: rgb(43, 0, 43);
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar-left > h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Mate SC", serif;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+}
+.sidebar-left > button {
+  position: absolute;
+  bottom: 5rem;
+  left: 8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.fa-sign-out-alt {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.sidebar-left > h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Mate SC", serif;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin: 1rem;
+}
+.users-list {
+  background: white;
+  height: 50vh;
+  width: 80%;
+  overflow: auto;
+}
+.users > li {
+  list-style: none;
+  background: rgb(255, 138, 245);
+  font-size: 1.5rem;
+  font-family: "Mate SC", serif;
+  padding: 0 1rem;
+  width: 15rem;
+  margin: 0.3rem 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
